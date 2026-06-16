@@ -158,9 +158,10 @@ body {
     display: grid;
     width: 90%;
     margin: 0 auto;
-    gap: 1em;
+    gap: 3em;
     overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
+    justify-content: center;
 }
 
 
@@ -174,7 +175,9 @@ body {
 }
 
 .about__icon {
-    width: 40px;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
 }
 
 /* Knowledge */
