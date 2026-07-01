@@ -3,6 +3,7 @@
 :root {
     --padding-container: 100px 0;
     --color-title: #001A49;
+    --height-imgs: 190px;
 }
 
 body {
@@ -177,7 +178,38 @@ body {
 .about__icon {
     width: 100%;
     max-width: 220px;
-    height: auto;
+    height: var(--height-imgs);
+}
+
+iframe.about__icon{
+    height: var(--height-imgs);
+}
+
+.about__counter{
+    width:220px;
+    height:var(--height-imgs);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        145deg,
+        #5f6d7a 0%,
+        #8895a3 45%,
+        #dfe6ec 100%
+    );
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.about__counter span{
+    font-size:3rem;
+    font-weight:700;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 /* Knowledge */
@@ -214,6 +246,7 @@ body {
 /* price */
 
 .price{
+    background-color: #e5e5f7;
     text-align: center;
 }
 
@@ -227,7 +260,8 @@ body {
 }
 
 .price__element{
-    background-color: #e5e5f7;
+    height: 500px;
+    background-color: white;
     text-align: center;
     border-radius: 10px;
     width: 330px;
@@ -286,7 +320,6 @@ body {
 /* Testimony */
 
 .testimony{
-    background-color: #e5e5f7;
 }
 
 .testimony__container{
