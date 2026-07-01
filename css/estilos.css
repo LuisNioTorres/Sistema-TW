@@ -2,8 +2,11 @@
 
 :root {
     --padding-container: 100px 0;
-    --color-title: #001A49;
+    --color-title: #0D47A1;
     --height-imgs: 190px;
+    --background-principal: #BBDEFB;
+    --color-secundario: #2091F9;
+    --color-texto: #696871;
 }
 
 body {
@@ -129,7 +132,7 @@ body {
 
 .cta {
     display: inline-block;
-    background-color: #2091F9;
+    background-color: var(--color-secundario);
     justify-self: center;
     color: #fff;
     text-decoration: none;
@@ -143,6 +146,10 @@ body {
     text-align: center;
 }
 
+.about__title {
+    color: var(--color-title)
+}
+
 .subtitle {
     color: var(--color-title);
     font-size: 2rem;
@@ -152,6 +159,7 @@ body {
 
 .about__paragraph {
     line-height: 1.7;
+    color: var(--color-texto);
 }
 
 .about__main {
@@ -243,10 +251,266 @@ iframe.about__icon{
     display: block;
 }
 
+/* ===========================
+   CALENDARIO
+=========================== */
+
+.calendar{
+    background:var(--background-principal);
+}
+
+
+.calendar .container{
+
+    max-width:950px;
+
+}
+
+
+.calendar__title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.calendar__timeline{
+
+    width:90%;
+
+    margin:0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.calendar__event{
+
+    display:grid;
+
+    grid-template-columns:1fr 70px 170px;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.calendar__left{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+}
+
+.calendar__circle{
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+
+    margin-top:10px;
+
+    flex-shrink:0;
+
+    box-shadow:0 0 0 7px rgba(13,110,253,.12);
+
+}
+
+.calendar__content{
+
+    background:white;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.calendar__date{
+
+    display:inline-block;
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:25px;
+
+    font-size:.85rem;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+}
+
+.calendar__content h3{
+
+    color:#1d3557;
+
+    margin-bottom:15px;
+
+}
+
+.calendar__content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.calendar__line{
+
+    height:3px;
+
+    background:#0d6efd;
+
+    border-radius:10px;
+
+}
+
+.calendar__image{
+
+    margin:0;
+
+}
+
+.calendar__image img{
+
+    width:100%;
+
+    height:220px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.calendar__buttons{
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.calendar__btn{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.calendar__btn:hover{
+
+    background:#0d6efd;
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+.calendar__dateCard{
+
+    width:160px;
+
+    height:170px;
+
+    background:linear-gradient(160deg,#3ea5ff,#1b5fc7);
+
+    border-radius:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.calendar__month{
+
+    font-size:1rem;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+
+}
+
+.calendar__day{
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    line-height:1;
+
+    margin:10px 0;
+
+}
+
+.calendar__year{
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+}
+
+
 /* price */
 
 .price{
-    background-color: #e5e5f7;
+    background-color: var(--background-principal);
+    
     text-align: center;
 }
 
@@ -260,7 +524,12 @@ iframe.about__icon{
 }
 
 .price__element{
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center; 
+    height: 450px;
+    border-color: var(--color-secundario);
     background-color: white;
     text-align: center;
     border-radius: 10px;
@@ -276,7 +545,7 @@ iframe.about__icon{
 .price__element--best{
     width: 370px;
     padding: 60px 40px;
-    background-color: #FF7143;
+    background-color: var(--color-secundario);
     --color-plan: rgb(255 255 255 / 75%);
     --color-price: #fff;
     --bg-cta: #9F3919;
@@ -320,44 +589,66 @@ iframe.about__icon{
 /* Testimony */
 
 .testimony{
+    background:#f7f9fc;
 }
 
 .testimony__container{
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    gap: 1em;
-    align-items: center;
+    display:grid;
+    grid-template-columns:50px 1fr 50px;
+    align-items:center;
+    gap:2em;
 }
 
 .testimony__body{
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
+
+    display:grid;
+    grid-template-columns:1.2fr 420px;
+    align-items:center;
+    gap:3em;
+
+    grid-column:2/3;
+    grid-row:1/2;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    opacity:0;
+    pointer-events:none;
 }
 
 
 .testimony__body--show{
-    pointer-events: unset;
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+
+    opacity:1;
+
+    pointer-events:unset;
+
+    transition:opacity .8s ease;
+}
+
+.testimony__picture{
+    margin:0;
 }
 
 .testimony__img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 30%;
+
+    width:100%;
+
+    height:260px;
+
+    border-radius:15px;
+
+    object-fit:cover;
 }
 
 .testimony__texts{
-    max-width: 700px;
+
+    max-width:100%;
 }
 
 .testimony__course{
@@ -371,6 +662,75 @@ iframe.about__icon{
     width: 90%;
     cursor: pointer;
 }
+
+.news__tag{
+
+    display:inline-block;
+
+    background:var(--color-secundario);
+
+    color: white;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+}
+
+.testimony__review{
+
+    margin:20px 0;
+
+    color:#555;
+
+    line-height:1.8;
+}
+
+.news__button{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:12px 22px;
+
+    font-weight:600;
+
+    background:var(--color-secundario);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.news__button:hover{
+
+    background:#084298;
+}
+
+.testimony__arrow{
+
+    width:32px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.testimony__arrow:hover{
+
+    transform:scale(1.15);
+}
+
 
 /* Questions */
 
